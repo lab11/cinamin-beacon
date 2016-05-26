@@ -600,8 +600,6 @@ This Sunstone Circuits 2 Layer .DRU has been set to cover our minimum requiremen
 <via x="3.65" y="3.55" extent="1-16" drill="0.1016" diameter="0.3048"/>
 <via x="3.65" y="3.55" extent="1-16" drill="0.1016" diameter="0.3048"/>
 <via x="3.65" y="2.75" extent="1-16" drill="0.1016" diameter="0.3048"/>
-<via x="2.85" y="3.95" extent="1-16" drill="0.1016" diameter="0.3048"/>
-<via x="2.45" y="3.55" extent="1-16" drill="0.1016" diameter="0.3048"/>
 <polygon width="0.01" layer="16" isolate="0.1016" thermals="no">
 <vertex x="0" y="0"/>
 <vertex x="0" y="2.2"/>
@@ -628,6 +626,7 @@ This Sunstone Circuits 2 Layer .DRU has been set to cover our minimum requiremen
 <wire x1="4.75" y1="7.35" x2="5.15" y2="7.8" width="0.1016" layer="1"/>
 <wire x1="5.15" y1="7.8" x2="6.25" y2="7.8" width="0.1016" layer="1"/>
 <wire x1="0.46" y1="1.583" x2="-4.833" y2="5.2762" width="0" layer="19" extent="1-16"/>
+<wire x1="2.062" y1="3.542" x2="3.65" y2="3.55" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="SW_CLK">
 <contactref element="PROG1" pad="4"/>

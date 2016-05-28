@@ -190,6 +190,7 @@
 <smd name="B1" x="0.2" y="-0.2" dx="0.22" dy="0.22" layer="1" roundness="100"/>
 <smd name="B2" x="0.2" y="0.2" dx="0.22" dy="0.22" layer="1" roundness="100"/>
 <smd name="A2" x="-0.2" y="0.2" dx="0.22" dy="0.22" layer="1" roundness="100"/>
+<text x="-1.778" y="0.508" size="0.762" layer="25">&gt;NAME</text>
 </package>
 <package name="WLCSP-34">
 <smd name="F1" x="0" y="0" dx="0.22" dy="0.22" layer="1" roundness="100"/>
@@ -387,7 +388,7 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="LD39115" uservalue="yes">
+<deviceset name="LD39115">
 <description>Small, low current LDO STMICRO</description>
 <gates>
 <gate name="G$1" symbol="LD39115" x="0" y="0"/>
@@ -544,6 +545,40 @@ LETTER landscape</description>
 <wire x1="-0.13" y1="0" x2="0.12" y2="0" width="0.05" layer="21"/>
 <text x="-0.36" y="0.4" size="0.127" layer="25">&gt;NAME</text>
 </package>
+<package name="CAP0603">
+<smd name="POS" x="-0.65" y="0" dx="0.7" dy="1" layer="1"/>
+<smd name="NEG" x="0.65" y="0" dx="0.7" dy="1" layer="1"/>
+<text x="0" y="0.762" size="1.016" layer="25" font="vector" ratio="12" align="bottom-center">&gt;NAME</text>
+<wire x1="-0.3048" y1="0.6096" x2="-1.0414" y2="0.6096" width="0.127" layer="21"/>
+<wire x1="-1.0414" y1="0.6096" x2="-1.143" y2="0.508" width="0.127" layer="21"/>
+<wire x1="-1.143" y1="0.508" x2="-1.143" y2="-0.508" width="0.127" layer="21"/>
+<wire x1="-1.143" y1="-0.508" x2="-1.0414" y2="-0.6096" width="0.127" layer="21"/>
+<wire x1="-1.0414" y1="-0.6096" x2="-0.3048" y2="-0.6096" width="0.127" layer="21"/>
+<circle x="0" y="0" radius="0.1778" width="0" layer="21"/>
+</package>
+<package name="2917-POL">
+<smd name="+" x="0" y="3.1" dx="2.48" dy="2.5" layer="1"/>
+<smd name="-" x="0" y="-3.1" dx="2.48" dy="2.5" layer="1"/>
+<wire x1="-2.15" y1="3.65" x2="-2.15" y2="1" width="0.127" layer="21"/>
+<wire x1="-2.15" y1="1" x2="-2.15" y2="-3.65" width="0.127" layer="21"/>
+<wire x1="-2.15" y1="-3.65" x2="2.15" y2="-3.65" width="0.127" layer="21"/>
+<wire x1="2.15" y1="-3.65" x2="2.15" y2="1" width="0.127" layer="21"/>
+<wire x1="2.15" y1="1" x2="2.15" y2="3.65" width="0.127" layer="21"/>
+<wire x1="2.15" y1="3.65" x2="-2.15" y2="3.65" width="0.127" layer="21"/>
+<text x="-2.54" y="0" size="1.016" layer="25" font="vector" ratio="12" rot="R90" align="bottom-center">&gt;NAME</text>
+<wire x1="-2.15" y1="1" x2="2.15" y2="1" width="0.127" layer="21"/>
+</package>
+<package name="0603_CAP_SMALL">
+<smd name="POS" x="-0.55" y="0" dx="0.6" dy="0.9" layer="1"/>
+<smd name="NEG" x="0.55" y="0" dx="0.6" dy="0.9" layer="1"/>
+<text x="0" y="0.762" size="1.016" layer="25" font="vector" ratio="12" align="bottom-center">&gt;NAME</text>
+<wire x1="-0.1548" y1="0.5596" x2="-0.8914" y2="0.5596" width="0.0762" layer="21"/>
+<wire x1="-0.8914" y1="0.5596" x2="-0.993" y2="0.508" width="0.0762" layer="21"/>
+<wire x1="-0.993" y1="0.508" x2="-0.993" y2="-0.508" width="0.0762" layer="21"/>
+<wire x1="-0.993" y1="-0.508" x2="-0.8914" y2="-0.5596" width="0.0762" layer="21"/>
+<wire x1="-0.8914" y1="-0.5596" x2="-0.1548" y2="-0.5596" width="0.0762" layer="21"/>
+<circle x="0" y="0" radius="0.1778" width="0" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="CAPACITOR">
@@ -555,6 +590,18 @@ LETTER landscape</description>
 <rectangle x1="-1.778" y1="-2.032" x2="1.778" y2="-1.524" layer="94"/>
 <text x="-2.54" y="-1.27" size="1.778" layer="95" ratio="12" rot="R90" align="bottom-center">&gt;NAME</text>
 <text x="2.54" y="-1.27" size="1.778" layer="96" ratio="12" rot="R270" align="bottom-center">&gt;VALUE</text>
+</symbol>
+<symbol name="CAP_POLARIZED">
+<pin name="ANODE" x="0" y="-2.54" visible="off" length="point"/>
+<pin name="CATHODE" x="0" y="2.54" visible="off" length="point"/>
+<wire x1="0" y1="2.54" x2="0" y2="0.508" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-0.508" width="0.254" layer="94"/>
+<wire x1="2.54" y1="0.508" x2="0" y2="0.508" width="0.254" layer="94"/>
+<wire x1="0" y1="0.508" x2="-2.54" y2="0.508" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-1.016" x2="-2.54" y2="-1.016" width="0.254" layer="94" curve="45"/>
+<text x="2.032" y="1.524" size="1.778" layer="95" ratio="12">&gt;NAME</text>
+<text x="2.032" y="-2.54" size="1.778" layer="96" ratio="12">&gt;VALUE</text>
+<text x="-0.762" y="0.762" size="1.016" layer="94" font="vector" ratio="12" align="bottom-center">+</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -595,6 +642,40 @@ LETTER landscape</description>
 <connects>
 <connect gate="G$1" pin="1" pad="P$1"/>
 <connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="CAP_POL" prefix="C" uservalue="yes">
+<gates>
+<gate name="G$1" symbol="CAP_POLARIZED" x="0" y="0"/>
+</gates>
+<devices>
+<device name="0603" package="CAP0603">
+<connects>
+<connect gate="G$1" pin="ANODE" pad="NEG"/>
+<connect gate="G$1" pin="CATHODE" pad="POS"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="2917" package="2917-POL">
+<connects>
+<connect gate="G$1" pin="ANODE" pad="-"/>
+<connect gate="G$1" pin="CATHODE" pad="+"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="0603_SMALL" package="0603_CAP_SMALL">
+<connects>
+<connect gate="G$1" pin="ANODE" pad="NEG"/>
+<connect gate="G$1" pin="CATHODE" pad="POS"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -1541,7 +1622,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <parts>
 <part name="FRAME1" library="frames" deviceset="LETTER_L" device=""/>
 <part name="D1" library="chips" deviceset="CPC1822" device="" value="CPC1822"/>
-<part name="C1" library="passives" deviceset="CAPACITOR" device="" value="15uF"/>
 <part name="PROG1" library="connector" deviceset="TC2030-JLINK" device="-L"/>
 <part name="GND23" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="U$3" library="chips" deviceset="DA14581-BGA" device=""/>
@@ -1557,6 +1637,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="GND6" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="TP1" library="testpad" deviceset="TPS" device="PAD1-13"/>
 <part name="TP2" library="testpad" deviceset="TPS" device="PAD1-13"/>
+<part name="C1" library="passives" deviceset="CAP_POL" device="0603_SMALL" value="47uF"/>
 </parts>
 <sheets>
 <sheet>
@@ -1568,7 +1649,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
 <instance part="FRAME1" gate="G$2" x="147.32" y="0"/>
 <instance part="D1" gate="G$1" x="15.24" y="99.06"/>
-<instance part="C1" gate="G$1" x="30.48" y="101.6"/>
 <instance part="PROG1" gate="G$1" x="25.4" y="20.32"/>
 <instance part="GND23" gate="1" x="7.62" y="7.62"/>
 <instance part="U$3" gate="G$1" x="86.36" y="50.8"/>
@@ -1584,6 +1664,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="GND6" gate="1" x="50.8" y="83.82"/>
 <instance part="TP1" gate="G$1" x="73.66" y="86.36"/>
 <instance part="TP2" gate="G$1" x="33.02" y="66.04"/>
+<instance part="C1" gate="G$1" x="30.48" y="99.06"/>
 </instances>
 <busses>
 </busses>
@@ -1626,10 +1707,10 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="15.24" y1="88.9" x2="15.24" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="15.24" y1="86.36" x2="30.48" y2="86.36" width="0.1524" layer="91"/>
 <junction x="50.8" y="86.36"/>
-<pinref part="C1" gate="G$1" pin="2"/>
 <wire x1="30.48" y1="86.36" x2="50.8" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="30.48" y1="96.52" x2="30.48" y2="86.36" width="0.1524" layer="91"/>
 <junction x="30.48" y="86.36"/>
+<pinref part="C1" gate="G$1" pin="ANODE"/>
 </segment>
 <segment>
 <pinref part="GND7" gate="1" pin="GND"/>
@@ -1748,9 +1829,9 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="15.24" y1="119.38" x2="30.48" y2="119.38" width="0.1524" layer="91"/>
 <wire x1="30.48" y1="119.38" x2="50.8" y2="119.38" width="0.1524" layer="91"/>
 <wire x1="50.8" y1="119.38" x2="50.8" y2="114.3" width="0.1524" layer="91"/>
-<pinref part="C1" gate="G$1" pin="1"/>
-<wire x1="30.48" y1="104.14" x2="30.48" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="101.6" x2="30.48" y2="119.38" width="0.1524" layer="91"/>
 <junction x="30.48" y="119.38"/>
+<pinref part="C1" gate="G$1" pin="CATHODE"/>
 </segment>
 </net>
 <net name="N$1" class="0">
